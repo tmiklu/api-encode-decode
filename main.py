@@ -4,8 +4,8 @@ import base64
 
 url = 'https://rj5pfi3lci.execute-api.eu-west-1.amazonaws.com/prod/'
 
-with open("image.png", "rb") as files:
-    encoded_string = base64.b64encode(files.read())
+with open("image.png", "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read())
 
 def send_data():
     res = requests.post(
